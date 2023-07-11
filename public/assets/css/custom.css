@@ -1,0 +1,47 @@
+table > thead {
+    background-color: #004B93;
+    color: #ffffff;
+}
+
+table td, th {
+    border-left: 1px solid white;
+}
+
+/*  auth  */
+#auth_body {
+    background-image: url('../images/layouts/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-logo {
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.auth-card {
+    background-color: #ffffff61;
+    border-radius: 12px;
+    min-height: 70vh;
+
+}
+
+/* common */
+.app-input {
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #004B93;
+    padding: 15px 12px;
+    color: black;
+}
+
+.app-input:focus {
+    background: #ffffff61;
+    border: 1px solid #0274df;
+}
+
+.black-color {
+    color: black;
+}
