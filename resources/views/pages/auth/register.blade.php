@@ -38,24 +38,14 @@
                 <h5 class="text-black">{{__('messages.level')}}</h5>
             </div>
             <div class="row col-12">
-                <div class="col-4 text-right">
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="level1" name="level" class="form-check-input" value="1" checked>
-                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_1')}}</label>
+                @foreach($levels as $level)
+                    <div class="col-4 text-right">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="level{{$level->id}}" name="level" class="form-check-input" value="{{$level->id}}">
+                            <label class="form-check-label text-black" for="customRadio3">{{$level->name}}</label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-4 text-center">
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="level2" name="level" class="form-check-input" value="2">
-                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_2')}}</label>
-                    </div>
-                </div>
-                <div class="col-4 text-left">
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="level3" name="level" class="form-check-input" value="3">
-                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_3')}}</label>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="row mt-2">
@@ -65,10 +55,4 @@
             </div>
         </div>
     </form>                                       
-@endsection
-
-@section('script')
-<!-- Include Parsley.js JS -->
-<script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js"></script>
-<script src="{{ URL::asset('/assets/js/form-validation.init.js') }}"></script>
 @endsection

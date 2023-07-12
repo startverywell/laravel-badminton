@@ -22,12 +22,12 @@ class MatchHistoryObserver
         $score1 = $matchHistory->score1;
         $score2 = $matchHistory->score2;
 
-        $score1 > $score2 ? $player1->point += 30 : $player1->point -= $score2-$score1;
+        $score1 > $score2 ? $player1->point += 30 : $player1->point += $score1-30;
         $score1 > $score2 ? $player1->win += 1 : $player1->lose += 1;
         $player1->save();
 
         $player2 = User::where('id', $matchHistory->player2)->first();
-        $score1 < $score2 ? $player2->point += 30 : $player2->point -= $score2-$score1;
+        $score1 < $score2 ? $player2->point += 30 : $player2->point += $score2-30;
         $score1 < $score2 ? $player2->win += 1 : $player2->lose += 1;
         $player2->save();
     }

@@ -18,7 +18,7 @@ table.table-hover td, th {
 }
 
 .auth-logo {
-    margin: 10vh auto;
+    margin: 10vh auto 5vh;
     text-align: center;
 }
 
@@ -52,4 +52,40 @@ table.table-hover td, th {
 
 .text-right {
     text-align: right;
+}
+
+/* user img */
+.user-img {
+    height: 50vh;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: inline;
+}
+
+/* auth logo image */
+.auth-logo-lg img {
+    height: 69px;
+    transform: rotate(-45deg);
+}
+
+/* auth checkbox */
+.auth-form-check-input {
+    --ct-form-check-bg: var(--ct-secondary-bg);
+    width: 1.112em;
+    height: 1.112em;
+    margin-top: 0.194em;
+    vertical-align: top;
+    background-color: transparent;
+    background-image: var(--ct-form-check-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 2px solid var(--ct-border-color-translucent);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }

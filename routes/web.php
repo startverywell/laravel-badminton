@@ -27,6 +27,7 @@ Route::post('/register', [LoginController::class, 'registerUser'])->name('regist
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/user/mypage', [PlayerController::class, 'index'])->name('mypage');
+    Route::post('/search', [HomeController::class, 'search'])->name('home.search');
 
     Route::get('/match/history/{player2?}', [MatchHistoryController::class, 'index'])->name('match.history');
     Route::post('/match/history', [MatchHistoryController::class, 'save'])->name('match.save');

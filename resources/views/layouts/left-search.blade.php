@@ -1,3 +1,7 @@
+@php
+use App\Models\Level;
+$levels = Level::orderBy('id','asc')->get();
+@endphp
 <!-- ========== Left Sidebar Start ========== -->
 <div class="leftside-search">
 
@@ -16,16 +20,54 @@
 
     <!-- Sidebar -left -->
     <div class="h-100" id="leftside-menu-container" data-simplebar>
-        <!-- Leftbar User -->
-        <div class="leftbar-user">
-            <a href="pages-profile.html">
-                <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                <span class="leftbar-user-name mt-2">Dominic Keller</span>
-            </a>
+        <div class="clearfix mt-5">
+            <form class="custom-validation" action="{{route('home.search')}}" id="custom-form" method="post">
+                @csrf
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" name="name" placeholder="{{__('messages.userID')}}">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h5 class="text-white">{{__('messages.point')}}</h5>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <input type="text" name="point" data-plugin="range-slider" data-type="double" 
+                            data-grid="true" data-min="0" data-max="1000" data-from="200" data-to="800"
+                        />
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h5 class="text-white">{{__('messages.level')}}</h5>
+                    </div>
+                </div>
+                @foreach($levels as $level)
+                    <div class="row mt-1">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="form-check">
+                                <input type="checkbox" value="{{$level->id}}" name="level[]" class="form-check-input" checked>
+                                <label class="form-check-label text-white" for="customCheck1">{{$level->name}}</label>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="row mt-2">
+                    <div class="col-2"></div>
+                    <div class="col-8 mt-2 d-grid">
+                        <button type="submit" class="btn btn-soft-primary btn-lg rounded-pill">{{__('messages.search')}}</button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-
-        <div class="clearfix"></div>
     </div>
 </div>
 <!-- ========== Left Sidebar End ========== -->

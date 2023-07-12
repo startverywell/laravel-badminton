@@ -21,7 +21,10 @@ class PlayerController extends Controller
      */
     public function Index()
     {
-        $histories = MatchHistory::orderby('id', 'desc')->paginate(10);
+        $histories = MatchHistory::where('player1', Auth::user()->id)
+                                    ->orWhere('player2', Auth::user()->id)
+                                    ->orderby('id', 'desc')
+                                    ->paginate(10);
         return view('pages.mypage.index', [
             'histories' => $histories,
         ]);

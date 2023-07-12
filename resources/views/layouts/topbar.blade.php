@@ -12,12 +12,14 @@ use Illuminate\Support\Facades\Auth;
                 <a href="{{route('home')}}" class="logo-light">
                     <span class="logo-lg">
                         <img src="{{ URL::asset('assets/images/logo.png')}}" alt="logo">
+                        <h5 class="text-white logo-text">{{__('messages.logo')}}</h5>
                     </span>
                 </a>
                 <!-- Logo Dark -->
                 <a href="{{route('home')}}" class="logo-dark">
                     <span class="logo-lg">
                         <img src="{{ URL::asset('assets/images/logo.png')}}" alt="logo">
+                        <h5 class="text-white logo-text">{{__('messages.logo')}}</h5>
                     </span>
                 </a>
             </div>

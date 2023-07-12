@@ -42,7 +42,7 @@ class LoginController extends Controller
  
         return back()->withErrors([
             'name' => __('auth.no_user'),
-        ])->onlyInput('name');
+        ]);
     }
 
     /**
@@ -91,7 +91,10 @@ class LoginController extends Controller
 
     public function register() 
     {
-        return view('pages.auth.register');
+        $levels = Level::orderBy('id','asc')->get();
+        return view('pages.auth.register', [
+            'levels' => $levels
+        ]);
     }
 
     public function logout()

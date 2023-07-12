@@ -16,30 +16,30 @@
     <!-- Sidebar -left -->
     <div class="h-100" id="leftside-menu-container" data-simplebar>
         <!--- Sidemenu -->
-        <ul class="side-nav">
+        <ul class="side-nav mt-4">
             @auth
                 <li class="side-nav-item">
                     <a href="{{route('mypage')}}" class="side-nav-link">
-                        <i class="uil-calender"></i>
+                        <i class="ri-user-shared-line"></i>
                         <span> {{__('menu.mypage')}}r </span>
                     </a>
                 </li>
                 <li class="side-nav-item">
                     <a href="{{route('match.history')}}" class="side-nav-link">
-                        <i class="uil-comments-alt"></i>
+                        <i class="ri-menu-add-line"></i>
                         <span> {{__('menu.match.history')}} </span>
                     </a>
                 </li>
                 <li class="side-nav-item">
                     <a href="{{route('logout')}}" class="side-nav-link">
-                        <i class="uil-comments-alt"></i>
+                        <i class="ri-logout-box-line"></i>
                         <span> {{__('auth.logout')}} </span>
                     </a>
                 </li>
             @else
                 <li class="side-nav-item">
                     <a href="{{route('login')}}" class="side-nav-link">
-                        <i class="uil-comments-alt"></i>
+                        <i class="ri-login-box-line"></i>
                         <span> {{__('auth.login')}} </span>
                     </a>
                 </li>

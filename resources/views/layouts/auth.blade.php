@@ -32,8 +32,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <a href="{{route('home')}}" class="auth-logo">
-                                <span class="logo-lg">
+                                <span class="auth-logo-lg">
                                     <img src="assets/images/logo.png" alt="dark logo">
+                                    <h2 class="text-black logo-text">{{__('messages.logo')}}</h2>
                                 </span>
                             </a>
                         </div>

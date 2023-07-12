@@ -9,7 +9,7 @@
 @section('content')
     @auth
     <input type="hidden" id="point" value="{{Auth::user()->point}}">  
-    <form class="custom-validation" action="{{route('match.save')}}" id="custom-form" method="post">
+    <form class="custom-validation" action="{{route('match.save')}}" id="history-form" method="post">
         @csrf
         <input type="hidden" name="player1" value="{{Auth::user()->id}}">  
         <div class="row mt-5">
@@ -117,7 +117,7 @@
                             <button data-bs-dismiss="modal" aria-hidden="true" class="btn btn-outline-primary rounded-pill text-primary">{{__('messages.back')}}</button>
                         </div>
                         <div class="col-5 d-grid">
-                            <button type="button" id="send" class="btn btn-outline-primary rounded-pill">{{__('messages.add')}}</button>
+                            <button type="button" id="history_save" class="btn btn-outline-primary rounded-pill">{{__('messages.add')}}</button>
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
         } );
 
         const locale_datetimepicker = {
-        format: 'YYYY-MM-DD',
+            format: 'YYYY-MM-DD',
             "daysOfWeek": [
                 "日",
                 "月",
@@ -168,27 +168,29 @@
             ],
         };
 
-
         $('.single-date-picker').daterangepicker({
             singleDatePicker: true,
             autoApply: true,
             locale: locale_datetimepicker
+        }, function(start, end, label) {
+            console.log(start.format('YYYY-MM-DD'));
+            $('#date_text').html(start.format('YYYY-MM-DD'));
         });
 
         $("#timepicker").flatpickr({
             enableTime:!0,
             noCalendar:!0,
-            // dateFormat:"H:i",
-            // time_24hr:!0
+            dateFormat:"H:i",
+            time_24hr:!0
         });
 
         $('#single-select-field').change(()=>{
             $('.player2_name').html($(`#single-select-field>option[value="${$('#single-select-field').val()}"]`).text());
         });
 
-        $('.single-date-picker').change((e) => {
-            $('#date_text').html(e.target.value);
-        });
+        // $('.single-date-picker').change((e) => {
+        //     $('#date_text').html(e.target.value);
+        // });
         
         $('#timepicker').change((e) => {
             $('#time_text').html(e.target.value);
@@ -209,7 +211,7 @@
             });
             
             if (!valid) {
-                $('#custom-form').submit();
+                $('#history-form').submit();
                 return false;
             }
             let s1 = $('#score1').val();
@@ -224,13 +226,13 @@
             $('#result2').removeClass('text-primary');
             $('#result2').addClass(color);
             $('#result1').html(s1 > s2 ? `{{__('messages.win')}}` : `{{__('messages.lose')}}`);
-            $('#result2').html(s1 > s2 ? `${point} + 30` : `${point} - ${s2-s1}`);
+            $('#result2').html(s1 > s2 ? `${point} + 30` : `${point} - 30 + ${s1}`);
 
             $('#centermodal').modal('show');
         });
 
-        $('#send').click(()=>{
-            $('#custom-form').submit();
+        $('#history_save').click(()=>{
+            $('#history-form').submit();
         });
     });
     

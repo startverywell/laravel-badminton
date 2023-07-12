@@ -3,11 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Badminton" name="description" />
         <meta content="Badminton" name="Badminton" />
+        <meta name="description" content=""/>
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="{{route('home')}}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{__('messages.logo')}}">
+        <meta property="og:description" content="">
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="">
+        <meta property="twitter:url" content="{{route('home')}}">
+        <meta name="twitter:title" content="{{__('messages.logo')}}">
+        <meta name="twitter:description" content="">
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="robots" content="noindex, nofollow, noarchive">
 
-        <title>Laravel</title>
+        <meta name="keywords" content="badminton"/>
+        <title>{{__('messages.logo')}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">

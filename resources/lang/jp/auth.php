@@ -7,11 +7,11 @@ return [
     'login' => 'ログイン',
     'email' => 'メールアドレス',
     'confirm_password' => 'パスワード確認',
-    'email.required' => 'The email field is required.',
-    'email.email' => 'Please enter a valid email address.',
-    'email.unique' => 'The email has already been taken.',
-    'name.required' => 'The name field is required.',
-    'name.unique' => 'The name has already been taken.',
-    'no_user' => 'The provided credentials do not match our records.',
-    'logout' => 'Log out'
+    'email.required' => 'メールアドレスの入力は必須です',
+    'email.email' => 'メールアドレスが正しく入力されていません',
+    'email.unique' => 'そのメールアドレスは既に使用されています',
+    'name.required' => '名前の入力は必須です',
+    'name.unique' => 'その名前はすでに使用されています',
+    'no_user' => 'メールアドレスまたはパスワードが正しくありません',
+    'logout' => 'ログアウト'
 ];

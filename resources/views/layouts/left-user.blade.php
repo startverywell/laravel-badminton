@@ -16,16 +16,47 @@
 
     <!-- Sidebar -left -->
     <div class="h-100" id="leftside-menu-container" data-simplebar>
-        <!-- Leftbar User -->
-        <div class="leftbar-user">
-            <a href="pages-profile.html">
-                <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                <span class="leftbar-user-name mt-2">Dominic Keller</span>
-            </a>
+        <div class="clearfix">
+            <div class="row mt-2">
+                <img src="{{ URL::asset('assets/images/user.png')}}" alt="user-image" class="user-img">
+            </div>
+            <div class="row mt-3">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{__('messages.userID')}}</h5>
+                </div> 
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{Auth::user()->name}}</h5>
+                </div>    
+            </div>
+            <div class="row mt-1">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{__('messages.level')}}</h5>
+                </div> 
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{Auth::user()->userLevel->name}}</h5>                    
+                </div>    
+            </div>
+            <div class="row mt-1">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{__('messages.point')}}</h5>
+                </div> 
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{Auth::user()->point}}</h5>                    
+                </div>    
+            </div>
+            <div class="row mt-1">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <h5 class="text-center text-danger">{{__('messages.win')}} {{Auth::user()->win}}</h5>
+                </div> 
+                <div class="col-4">
+                    <h5 class="text-center text-white">{{__('messages.lose')}} {{Auth::user()->lose}}</h5>                    
+                </div>    
+            </div>
         </div>
-
-
-        <div class="clearfix"></div>
     </div>
 </div>
 <!-- ========== Left User End ========== -->

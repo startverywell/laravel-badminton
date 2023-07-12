@@ -25,16 +25,20 @@
                         @if($history->playerOne->id == Auth::user()->id)
                             <td>{{$history->playerTwo->name}}</td>
                             <td>{{$history->match_date}} {{$history->match_time}}</td>
-                            <td class="{{$history->score2 > $history->score1 ? 'text-danger' : 'text-primary'}}">{{$history->score2}}:{{$history->score1}}</td>
-                            <td>{{$history->playerTwo->point}}</td>
+                            <td class="{{$history->score2 < $history->score1 ? 'text-danger' : 'text-primary'}}">{{$history->score1}}:{{$history->score2}}</td>
+                            <td class="{{$history->score2 < $history->score1 ? 'text-danger' : 'text-primary'}}">
+                                {{$history->score2 < $history->score1 ? '+30' : $history->score1-30}}
+                            </td>
                         @else
                             <td>{{$history->playerOne->name}}</td>
                             <td>{{$history->match_date}} {{$history->match_time}}</td>
-                            <td class="{{$history->score2 < $history->score1 ? 'text-danger' : 'text-primary'}}">{{$history->score1}}:{{$history->score2}}</td>
-                            <td>{{$history->playerOne->point}}</td>
+                            <td class="{{$history->score2 > $history->score1 ? 'text-danger' : 'text-primary'}}">{{$history->score2}}:{{$history->score1}}</td>
+                            <td class="{{$history->score2 > $history->score1 ? 'text-danger' : 'text-primary'}}">
+                                {{$history->score2 > $history->score1 ? '+30' : $history->score2-30}}
+                            </td>
                         @endif
                     </tr>
-                @endforeachs
+                @endforeach
             </tbody>
         </table>
     </div>

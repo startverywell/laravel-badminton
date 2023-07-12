@@ -55,4 +55,12 @@ class User extends Authenticatable
             'password' => 'required|min:6',
         ];
     }
+
+    /**
+     * Get the  Level associated with the user.
+     */
+    public function UserLevel()
+    {
+        return $this->hasOne(Level::class, 'id', 'level');
+    }
 }
