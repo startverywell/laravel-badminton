@@ -15,5 +15,8 @@ return [
     'match.date' => '試合日',
     'match.time' => '試合時',
     'add' => '追加',
-    'back' => 'キャンセル'
+    'back' => 'キャンセル',
+    'player2' => 'player2',
+    'result' => '結果',
+    'match.datetime' => '試合日時'
 ];

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\client\MatchHistoryController;
+use App\Http\Controllers\client\PlayerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,8 @@ Route::post('/register', [LoginController::class, 'registerUser'])->name('regist
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-    Route::get('/user/mypage', [HomeController::class, 'index'])->name('mypage');
+    Route::get('/user/mypage', [PlayerController::class, 'index'])->name('mypage');
 
     Route::get('/match/history/{player2?}', [MatchHistoryController::class, 'index'])->name('match.history');
-    Route::post('/match/history', [MatchHistoryController::class, 'index'])->name('match.save');
+    Route::post('/match/history', [MatchHistoryController::class, 'save'])->name('match.save');
 });

@@ -10,4 +10,7 @@
 <!-- Custom css -->
 <link href="{{ URL::asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
 
+<!-- Include Parsley.js CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/src/parsley.min.css">
+
 @yield('css')

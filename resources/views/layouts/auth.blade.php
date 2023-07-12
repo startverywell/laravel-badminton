@@ -15,10 +15,7 @@
     
         <!-- Styles -->
         @include('layouts.head-css')
-        <!-- Include Parsley.js CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/src/parsley.min.css">
-
-
+        
         <style>
             body {
                 font-family: 'Nunito', sans-serif;

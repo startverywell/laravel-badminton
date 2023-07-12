@@ -36,7 +36,7 @@ use Illuminate\Support\Facades\Auth;
                 </a>
             </li>
             @endauth
-            <li class="d-none d-sm-inline-block">
+            <!-- <li class="d-none d-sm-inline-block">
                 <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" title="Theme Mode">
                     <i class="ri-moon-line font-22"></i>
                 </div>
@@ -45,7 +45,7 @@ use Illuminate\Support\Facades\Auth;
                 <a class="nav-link" href="" data-toggle="fullscreen">
                     <i class="ri-fullscreen-line font-22"></i>
                 </a>
-            </li>
+            </li> -->
             <li class="dropdown">
                 <!-- Sidebar Menu Toggle Button -->
                 <button class="button-toggle-menu">
