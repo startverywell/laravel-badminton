@@ -131,7 +131,7 @@ html[data-bs-theme=dark][data-topbar-color=dark] {
   --ct-danger: #ff5b5b;
   --ct-light: #eef2f7;
   --ct-dark: #313a46;
-  --ct-primary-rgb: 83, 109, 230;
+  --ct-primary-rgb: 0, 75, 147;
   --ct-secondary-rgb: 108, 117, 125;
   --ct-success-rgb: 16, 196, 105;
   --ct-info-rgb: 53, 184, 224;
@@ -187,7 +187,7 @@ html[data-bs-theme=dark][data-topbar-color=dark] {
   --ct-tertiary-bg: #f6f7fb;
   --ct-tertiary-bg-rgb: 246, 247, 251;
   --ct-link-color: #536de6;
-  --ct-link-color-rgb: 83, 109, 230;
+  --ct-link-color-rgb: 0, 75, 147;
   --ct-link-decoration: none;
   --ct-link-hover-color: #475dc4;
   --ct-link-hover-color-rgb: 71, 93, 196;
@@ -210,7 +210,7 @@ html[data-bs-theme=dark][data-topbar-color=dark] {
   --ct-box-shadow-inset: inset 0 1px 2px rgba(var(--ct-body-color-rgb), 0.075);
   --ct-focus-ring-width: 0.15rem;
   --ct-focus-ring-opacity: 0.25;
-  --ct-focus-ring-color: rgba(83, 109, 230, 0.25);
+  --ct-focus-ring-color: rgba(0, 75, 147, 0.25);
   --ct-form-valid-color: #10c469;
   --ct-form-valid-border-color: #10c469;
   --ct-form-invalid-color: #ff5b5b;
@@ -301,7 +301,7 @@ hr {
   margin: 1.0005rem 0;
   color: inherit;
   border: 0;
-  border-top: var(--ct-border-width) solid var(--ct-border-color);
+  border-top: var(--ct-border-width) solid black;
   opacity: 1;
 }
 
@@ -3642,7 +3642,7 @@ textarea.form-control-lg {
   --ct-btn-hover-color: #fff;
   --ct-btn-hover-bg: #004B93;
   --ct-btn-hover-border-color: #004B93;
-  --ct-btn-focus-shadow-rgb: 83, 109, 230;
+  --ct-btn-focus-shadow-rgb: 0, 75, 147;
   --ct-btn-active-color: #fff;
   --ct-btn-active-bg: #004B93;
   --ct-btn-active-border-color: #004B93;
@@ -4327,8 +4327,8 @@ textarea.form-control-lg {
 }
 .nav-link:focus-visible {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.15rem rgba(83, 109, 230, 0.25);
-          box-shadow: 0 0 0 0.15rem rgba(83, 109, 230, 0.25);
+  -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 75, 147, 0.25);
+          box-shadow: 0 0 0 0.15rem rgba(0, 75, 147, 0.25);
 }
 .nav-link.disabled {
   color: var(--ct-nav-link-disabled-color);
@@ -7814,7 +7814,7 @@ textarea.form-control-lg {
 
 .text-bg-primary {
   color: #fff !important;
-  background-color: RGBA(83, 109, 230, var(--ct-bg-opacity, 1)) !important;
+  background-color: RGBA(0, 75, 147, var(--ct-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {

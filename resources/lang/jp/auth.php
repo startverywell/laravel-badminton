@@ -12,5 +12,6 @@ return [
     'email.unique' => 'The email has already been taken.',
     'name.required' => 'The name field is required.',
     'name.unique' => 'The name has already been taken.',
-    'no_user' => 'The provided credentials do not match our records.'
+    'no_user' => 'The provided credentials do not match our records.',
+    'logout' => 'Log out'
 ];

@@ -2,11 +2,7 @@
 <div class="leftside-search">
 
     <!-- Brand Logo Dark -->
-    <a href="index.html" class="logo logo-dark">
-        <span class="logo-lg">
-            <img src="assets/images/logo.png" alt="dark logo">
-        </span>
-    </a>
+    @include('layouts.logo')
 
     <!-- Sidebar Hover Menu Toggle Button -->
     <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">

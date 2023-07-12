@@ -1,11 +1,7 @@
 <!-- ========== Left Sidebar Start ========== -->
 <div class="leftside-menu">
     <!-- Brand Logo Dark -->
-    <a href="index.html" class="logo logo-dark">
-        <span class="logo-lg">
-            <img src="assets/images/logo.png" alt="dark logo">
-        </span>
-    </a>
+    @include('layouts.logo')
 
     <!-- Sidebar Hover Menu Toggle Button -->
     <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
@@ -19,36 +15,35 @@
 
     <!-- Sidebar -left -->
     <div class="h-100" id="leftside-menu-container" data-simplebar>
-        <!-- Leftbar User -->
-        <div class="leftbar-user">
-            <a href="{{route('mypage')}}">
-                <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                <span class="leftbar-user-name mt-2">Dominic Keller</span>
-            </a>
-        </div>
-
         <!--- Sidemenu -->
         <ul class="side-nav">
-            <li class="side-nav-item">
-                <a href="{{route('mypage')}}" class="side-nav-link">
-                    <i class="uil-calender"></i>
-                    <span> Calendar </span>
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="{{route('mypage')}}" class="side-nav-link">
-                    <i class="uil-comments-alt"></i>
-                    <span> Chat </span>
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="{{route('login')}}" class="side-nav-link">
-                    <i class="uil-comments-alt"></i>
-                    <span> Login </span>
-                </a>
-            </li>
+            @auth
+                <li class="side-nav-item">
+                    <a href="{{route('mypage')}}" class="side-nav-link">
+                        <i class="uil-calender"></i>
+                        <span> {{__('menu.mypage')}}r </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="{{route('match.history')}}" class="side-nav-link">
+                        <i class="uil-comments-alt"></i>
+                        <span> {{__('menu.match.history')}} </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="{{route('logout')}}" class="side-nav-link">
+                        <i class="uil-comments-alt"></i>
+                        <span> {{__('auth.logout')}} </span>
+                    </a>
+                </li>
+            @else
+                <li class="side-nav-item">
+                    <a href="{{route('login')}}" class="side-nav-link">
+                        <i class="uil-comments-alt"></i>
+                        <span> {{__('auth.login')}} </span>
+                    </a>
+                </li>
+            @endauth
         </ul>
         <!--- End Sidemenu -->
 

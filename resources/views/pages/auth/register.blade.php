@@ -35,25 +35,25 @@
         </div>
         <div class="row mt-2">
             <div class="col-12 text-center">
-                <h5 class="black-color">{{__('messages.level')}}</h5>
+                <h5 class="text-black">{{__('messages.level')}}</h5>
             </div>
             <div class="row col-12">
                 <div class="col-4 text-right">
                     <div class="form-check form-check-inline">
                         <input type="radio" id="level1" name="level" class="form-check-input" value="1" checked>
-                        <label class="form-check-label black-color" for="customRadio3">{{__('messages.level_1')}}</label>
+                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_1')}}</label>
                     </div>
                 </div>
                 <div class="col-4 text-center">
                     <div class="form-check form-check-inline">
                         <input type="radio" id="level2" name="level" class="form-check-input" value="2">
-                        <label class="form-check-label black-color" for="customRadio3">{{__('messages.level_2')}}</label>
+                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_2')}}</label>
                     </div>
                 </div>
                 <div class="col-4 text-left">
                     <div class="form-check form-check-inline">
                         <input type="radio" id="level3" name="level" class="form-check-input" value="3">
-                        <label class="form-check-label black-color" for="customRadio3">{{__('messages.level_3')}}</label>
+                        <label class="form-check-label text-black" for="customRadio3">{{__('messages.level_3')}}</label>
                     </div>
                 </div>
             </div>

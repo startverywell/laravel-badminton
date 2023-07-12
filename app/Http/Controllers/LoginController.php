@@ -94,4 +94,10 @@ class LoginController extends Controller
         return view('pages.auth.register');
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return view('pages.auth.login');
+    }
+
 }
